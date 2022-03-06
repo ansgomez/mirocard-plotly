@@ -32,21 +32,21 @@ t_app = t_app - t_app[0]
 P_app = 1000 * V_app * I_app
 
 # Subsampling constant
-# 10 seemed like a good compromise between detail
+# 5 seemed like a good compromise between detail
 # and responsivity
-sub = 10
+sub = 5
 
 # Main Figure
 fig = go.Figure()
-fig.add_trace(go.Scatter(x=t_app[::sub], y=P_app[::sub]))
+fig.add_trace(go.Scatter(x=t_app[::sub], y=P_app[::sub], line=dict(color="#027D3F") ))
 
 
 # Set title
 fig.update_layout(
-    title_text='Mirocard Power Measurments',
+#    title_text='Mirocard Power Measurements',
     xaxis_title='Time [ms]',
-    yaxis_title='Power [mW]',
-    template='plotly_white'
+    yaxis_title='Power [mW]'
+#   , template='plotly_white'
 )
 
 # Add range slider
