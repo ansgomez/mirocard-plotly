@@ -44,7 +44,7 @@ fig.add_trace(go.Scatter(x=t_app[::sub], y=P_app[::sub], line=dict(color="#027D3
 # Set title
 fig.update_layout(
 #    title_text='Mirocard Power Measurements',
-    xaxis_title='Time [ms]',
+    xaxis_title='Time [s]',
     yaxis_title='Power [mW]'
 #   , template='plotly_white'
 )
